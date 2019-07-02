@@ -1,12 +1,14 @@
-
-
 ## 写在前面
 
 为什么要做这个小程序？因为，截至本文发表，我和那位捡到我校园卡的女生在一起840天了，在此，希望各位小伙伴把这个项目拿走，不仅能够增强自己对小程序实战能力，也能早日找到自己所属的女孩。
 
 **提醒：本文主要聊聊该项目的云开发技术点和js逻辑，IM即时通讯之后会写。通过本文你将学习微信小程序云函数的使用、组件间通信的各种方法、根据功能需求设计js逻辑、promise相关用法、页面分页加载等**
 
+[github项目地址](https://github.com/HenleyZ/ECUT-FoundOrLost)
+
 ## 完整效果展示
+
+![](https://user-gold-cdn.xitu.io/2019/7/2/16bb05d95ec422c8?w=324&h=570&f=gif&s=4399469)
 
 ## 项目分析
 
@@ -156,9 +158,9 @@ checkUploadForm(releaseType) {
 
 ### 数据库记录示例
 
-
 ![](https://user-gold-cdn.xitu.io/2019/7/2/16bb023c2d8de24a?w=602&h=324&f=png&s=30024)
-![](https://user-gold-cdn.xitu.io/2019/7/2/16bb0223c62dcda1?w=378&h=167&f=png&s=13269)
+
+                                                   ![](https://user-gold-cdn.xitu.io/2019/7/2/16bb0223c62dcda1?w=378&h=167&f=png&s=13269)  
 
 ### 代码实现
 
@@ -214,7 +216,6 @@ exports.main = async (event, context) => {
 ### 效果展示
 
 ![](https://user-gold-cdn.xitu.io/2019/7/2/16bb025d643d19c8?w=324&h=570&f=gif&s=4055420)
-
 
 ## 加载发布的信息（本地代码）
 
@@ -335,6 +336,7 @@ onShow: function () {
 ![](https://user-gold-cdn.xitu.io/2019/7/2/16bb02b267c3e474?w=637&h=184&f=png&s=20516)
 
 ![](https://user-gold-cdn.xitu.io/2019/7/2/16bb02c51095f1ac?w=706&h=320&f=png&s=61577)
+
 ### 代码实现
 
 ```javascript
@@ -374,7 +376,6 @@ exports.main = async (event, context) => {
 ### 效果展示
 
 ![](https://user-gold-cdn.xitu.io/2019/7/2/16bb02e723014403?w=324&h=570&f=gif&s=4055420)
-
 
 ## 分页加载
 
@@ -428,6 +429,7 @@ let releaseList = await db.collection('user-release')
 ![](https://user-gold-cdn.xitu.io/2019/7/2/16bb02fdd9951480?w=324&h=570&f=gif&s=4926411)
 
 ## 技术总结
+
 - 组件间的通信除了可以使用<code>properties</code>，也可以尝试<code>selectComponent</code>来调用组件上的方法，将数据传过去。
 - 在实际项目中，总会遇到很多需要按步骤执行的函数，稍不注意，获取的数据就是错的，通过使用promise系列方法可以很好的解决异步问题。
 - 在小程序中频繁多次使用setData是非常消耗性能的，在设计js逻辑、构建函数、设置变量的时候要多加考虑项目功能前后的联系，从而保证代码严谨并且减小资源消耗。
