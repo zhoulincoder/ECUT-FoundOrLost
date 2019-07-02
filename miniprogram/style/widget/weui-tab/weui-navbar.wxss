@@ -1,0 +1,25 @@
+/*!
+ * WeUI v1.1.1 (https://github.com/weui/weui-wxss)
+ * Copyright 2017 Tencent, Inc.
+ * Licensed under the MIT license
+ */
+.navbar{
+  display:flex; 
+  z-index:500;
+  width: 100%;
+}
+.navbar__item{
+  display:inline-block;
+  padding:24rpx 40rpx;
+  box-sizing: border-box;
+  border-bottom:1rpx solid #ccc;
+}
+.navbar__item.bar__item_on{
+  color:#008FFF;
+  border-bottom: 4rpx solid #008FFF;
+}
+.navbar__title{
+  font-size:28rpx;
+  text-align:center;
+  white-space:nowrap;
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "category": "../../components/category/category",
+    "infocard": "../../components/infoCard/infoCard"
+  }
+}

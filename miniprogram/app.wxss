@@ -1,0 +1,7 @@
+/**app.wxss**/
+/* @import "./style/weui" */
+/* @import "./style/weui.wxss"; */
+
+page{
+  color:#000000
+}

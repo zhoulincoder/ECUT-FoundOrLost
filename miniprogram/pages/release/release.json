@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "category":"../../components/category/category",
+    "inputdetail": "../../components/inputDetail/inputDetail"
+  }
+}

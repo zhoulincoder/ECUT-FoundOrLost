@@ -1,0 +1,53 @@
+<!-- miniprogram/pages/mine/mine.wxml -->
+<view class="minePage">
+  <view class="minebd">
+    <image class="" src="{{minebd}}" mode="aspectFit" />
+  </view>
+  <view class="userAvatar">
+    <image src="{{userAvatar}}" alt="" mode="aspectFill" />
+  </view>
+  <view class="loginOrName">
+    <p class="userName" wx:if="{{isLogin}}">{{nickName}}</p>
+    <button wx:if="{{!isLogin}}" class="btnLogin" open-type="getUserInfo" bindgetuserinfo="onWeixinLogin">
+      点击登录
+    </button>
+  </view>
+  <view class="mineList">
+    <view class="listItem">
+      <navigator>
+        <view class="listLeft">
+          <image class="listIcon" src="{{listIcon[0]}}" style="" />
+          <view class="listTitle">我的发布(<span>6</span>)</view>
+        </view>
+        <view class="listArrow"></view>
+      </navigator>
+    </view>
+    <view class="listItem">
+      <navigator>
+        <view class="listLeft">
+          <image class="listIcon" src="{{listIcon[1]}}" style="" />
+          <view class="listTitle">消息(<span>2</span>)</view>
+        </view>
+        <view class="listArrow"></view>
+      </navigator>
+    </view>
+    <view class="listItem">
+      <navigator>
+        <view class="listLeft">
+          <image class="listIcon" src="{{listIcon[2]}}" style="" />
+          <view class="listTitle">反馈建议</view>
+        </view>
+        <view class="listArrow"></view>
+      </navigator>
+    </view>
+    <view class="listItem">
+      <navigator>
+        <view class="listLeft">
+          <image class="listIcon" src="{{listIcon[3]}}" style="" />
+          <view class="listTitle">管理员入口</view>
+        </view>
+        <view class="listArrow"></view>
+      </navigator>
+    </view>
+  </view>
+</view>
